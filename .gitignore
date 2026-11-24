@@ -1,0 +1,75 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+Thumbs.db
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# IntelliJ & VS Code
+**/*.iml
+**/*.ipr
+**/*.iws
+**/.idea/
+**/.vscode/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+**/.dart_tool/
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/.pub-cache/
+**/.pub/
+**/build/
+**/coverage/
+
+# Symbolication & Obfuscation
+app.*.symbols
+app.*.map.json
+
+# Environment Variables, Secrets & API Keys
+*.env
+*.env.*
+*.env.local
+env.json
+*.local.dart
+!*.env.example
+!env.json.example
+!local_api_keys.dart.example
+
+# Android Specific & Signing Keys
+**/android/app/debug
+**/android/app/profile
+**/android/app/release
+**/android/local.properties
+**/local.properties
+**/android/.gradle/
+**/android/.kotlin/
+**/android/**/generated/
+*.keystore
+*.jks
+key.properties
+google-services.json
+
+# iOS / macOS / Windows / Linux ephemeral builds
+**/ios/Flutter/Generated.xcconfig
+**/ios/Flutter/flutter_export_environment.sh
+**/ios/Pods/
+**/ios/.symlinks/
+**/ios/Flutter/App.framework
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/Flutter.podspec
+**/macos/Flutter/ephemeral/
+**/windows/flutter/ephemeral/
+**/linux/flutter/ephemeral/
+GoogleService-Info.plist
+*.p12
+*.mobileprovision

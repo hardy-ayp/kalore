@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Kalore - Smart Calorie & Nutrition Tracker">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Kalore">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>Kalore - Smart Nutrition Tracker</title>
+  <link rel="manifest" href="manifest.json">
+  <style>
+    body {
+      background-color: #000000;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    #loading-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      width: 100vw;
+      background-color: #000000;
+      color: #ffffff;
+      user-select: none;
+      transition: opacity 0.4s ease-out;
+    }
+    .logo-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 28px;
+      box-shadow: 0 12px 36px rgba(48, 209, 88, 0.35);
+      animation: pulse 2.2s infinite ease-in-out;
+      object-fit: cover;
+    }
+    .app-title {
+      margin-top: 24px;
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #ffffff;
+    }
+    .app-sub {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #8E8E93;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(0.96); opacity: 0.85; }
+      50% { transform: scale(1.02); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div id="loading-container">
+    <img src="assets/images/kalore_logo.png" onerror="this.src='favicon.png'" class="logo-img" alt="Kalore">
+    <div class="app-title">Kalore</div>
+    <div class="app-sub">Menyiapkan pengalaman nutrisi...</div>
+  </div>
+  <script>
+    window.addEventListener('flutter-first-frame', function() {
+      const el = document.getElementById('loading-container');
+      if (el) {
+        el.style.opacity = '0';
+        setTimeout(() => el.remove(), 400);
+      }
+    });
+  </script>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
